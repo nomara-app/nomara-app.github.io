@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Keep purchase records and receipts locally, export your data and explore on-device OCR and backups with Plus.">
+<title>Nomara: Receipts — Purchases, receipts and records</title>
+<style>
+:root { --bg:#faf9f6; --text:#292f2a; --muted:#606960; --sage:#526e58; --soft:#e8eee4; --card:#f0eee8; --border:#e5e3dc; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.7; overflow-wrap:anywhere; }
+.container { width:100%; max-width:1040px; margin:auto; padding:0 24px; }
+header { border-bottom:1px solid var(--border); padding:22px 0; }
+.header-row { display:flex; align-items:center; justify-content:space-between; gap:16px 32px; flex-wrap:wrap; }
+.brand { color:var(--sage); font-size:28px; font-weight:700; letter-spacing:-1px; text-decoration:none; }
+nav { display:flex; flex-wrap:wrap; gap:8px 24px; }
+nav a { padding:8px 0; }
+[aria-current="page"] { font-weight:700; text-underline-offset:6px; }
+a { color:var(--sage); text-underline-offset:4px; }
+a:hover { text-decoration-thickness:2px; }
+a:focus-visible { outline:3px solid var(--sage); outline-offset:5px; border-radius:3px; }
+.skip-link { position:absolute; top:-100px; left:16px; padding:12px 20px; background:var(--bg); z-index:2; }
+.skip-link:focus { top:8px; }
+.hero { padding:88px 0 64px; max-width:760px; }
+.hero.center { margin:auto; text-align:center; }
+.eyebrow { display:inline-block; background:var(--soft); color:var(--sage); padding:7px 17px; border-radius:40px; font-size:14px; font-weight:600; margin-bottom:24px; }
+h1 { font-size:clamp(38px,6vw,64px); line-height:1.12; letter-spacing:-2px; margin:0 0 24px; }
+h2 { font-size:clamp(25px,3vw,34px); line-height:1.25; letter-spacing:-.7px; margin:0 0 16px; }
+h3 { font-size:20px; line-height:1.35; margin:0 0 12px; }
+p { color:var(--muted); margin:0 0 18px; }
+.hero p { font-size:19px; max-width:640px; }
+.hero.center p { margin-left:auto; margin-right:auto; }
+.grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin-bottom:72px; }
+.grid.three { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.card { background:var(--card); border:1px solid var(--border); border-radius:26px; padding:32px; min-width:0; }
+.app-card { display:flex; flex-direction:column; }
+.app-card .button { margin-top:auto; align-self:flex-start; }
+.kicker { font-size:13px; font-weight:700; letter-spacing:1.3px; text-transform:uppercase; color:var(--sage); margin-bottom:18px; }
+ul { color:var(--muted); padding-left:22px; margin:0 0 26px; }
+li + li { margin-top:8px; }
+.button { display:inline-block; padding:11px 19px; background:var(--sage); color:var(--bg); border-radius:50px; font-weight:600; text-decoration:none; }
+.button:hover { text-decoration:underline; }
+.section-heading { max-width:660px; margin-bottom:26px; }
+.note { background:var(--soft); border-radius:26px; padding:36px; margin-bottom:72px; }
+.note p:last-child, .card p:last-child { margin-bottom:0; }
+.resource-links { display:flex; gap:10px 26px; flex-wrap:wrap; }
+.resource-links a { padding:8px 0; }
+footer { border-top:1px solid var(--border); padding:36px 0; }
+.footer-grid { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+footer h2 { font-size:17px; letter-spacing:0; margin-bottom:10px; }
+footer nav { display:flex; flex-direction:column; align-items:flex-start; gap:0; }
+.copyright { font-size:14px; margin:28px 0 0; }
+@media(max-width:700px) {
+ .hero { padding:56px 0 40px; }
+ .grid,.grid.three { grid-template-columns:1fr; gap:18px; margin-bottom:48px; }
+ .card { padding:26px; }
+ .note { padding:26px; margin-bottom:48px; }
+ .header-row { align-items:flex-start; }
+ header nav { gap:4px 18px; }
+}
+@media(max-width:420px) { .footer-grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header><div class="container header-row"><a class="brand" href="../index.html" aria-label="Nomara home">Nomara</a><nav aria-label="Main navigation"><a href="../index.html">Home</a>
+<a href="../body/index.html">Body Measurements</a>
+<a href="../receipts/index.html" aria-current="page">Receipts</a></nav></div></header>
+<main class="container" id="main" tabindex="-1">
+<section class="hero" aria-labelledby="page-title">
+ <span class="eyebrow">Nomara: Receipts</span>
+ <h1 id="page-title">Keep the purchase.<br>Keep the details.</h1>
+ <p>A local place for your purchases, receipts and attachments. Find the details you need, review estimated complaint deadlines and keep copies of your records.</p>
+</section>
+<section class="grid three" aria-label="Receipts features">
+ <article class="card"><h2>Records, together</h2><p>Enter and edit purchases, search your records and keep original JPG/JPEG, PNG or PDF receipts with them. Each attachment can be up to 5 MiB.</p></article>
+ <article class="card"><h2>Less typing with Plus</h2><p>On supported iOS and Android devices, on-device OCR helps turn receipt images into purchase details. Review the results before saving. PDF text extraction is not supported.</p></article>
+ <article class="card"><h2>Copies you control</h2><p>Export CSV files, purchase/receipt ZIP archives or original receipts. Plus adds versioned backups and validated restore with merge or explicitly confirmed replace.</p></article>
+</section>
+<section aria-labelledby="plans-title">
+ <div class="section-heading"><h2 id="plans-title">Start with Free. Add more with Plus.</h2><p>Choose the features that fit your records.</p></div>
+ <div class="grid">
+  <article class="card"><p class="kicker">Free</p><h3>The everyday essentials</h3><ul><li>Up to 10 purchases, with one receipt per purchase</li><li>Manual entry, editing, search and viewing</li><li>Estimated complaint deadlines</li><li>CSV, purchase/receipt ZIP and original-receipt exports</li></ul><p>Existing records stay accessible and exportable if Plus access ends.</p></article>
+  <article class="card"><p class="kicker">Plus</p><h3>More room for your records</h3><ul><li>Unlimited purchases, with up to five receipts per purchase</li><li>On-device image OCR</li><li>Local deadline reminders</li><li>Versioned ZIP backups and archive restore</li></ul><p>Informational App Store prices: <strong>19 DKK/month</strong> for the auto-renewing subscription or <strong>149 DKK</strong> for Lifetime. Actual prices vary by region and are shown in Apple's purchase interface.</p></article>
+ </div>
+</section>
+<section class="note" aria-labelledby="receipts-details">
+ <h2 id="receipts-details">A few details worth keeping.</h2>
+ <p>Purchase and receipt records are stored locally. Receipt data has no application-level encryption, and backup and export files are unencrypted. Protect your device and saved copies. Apple and RevenueCat process billing information.</p>
+ <p>Plus access, including Lifetime, requires periodic verification; verified access lasts up to three days offline, or an earlier applicable subscription expiry. Archive safety limits apply, including 100 MiB per ZIP. Estimated complaint deadlines are guidance to check independently, not a determination of your legal rights.</p>
+ <p>Receipts is for a general audience, including users under 18. Minors may need parental or guardian permission for paid purchases.</p>
+
+</section>
+<section class="note" aria-labelledby="receipts-help"><h2 id="receipts-help">Help with your records.</h2><p>For questions about receipts, backups or paid access, tell us you're using Nomara: Receipts.</p><div class="resource-links"><a href="mailto:support.nomara@gmail.com">support.nomara@gmail.com</a></div></section>
+</main>
+<footer><div class="container">
+ <div class="footer-grid">
+  <section aria-labelledby="footer-body"><h2 id="footer-body">Body Measurements</h2><nav aria-label="Body Measurements resources"><a href="../body/index.html">About the app</a><a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../support.html">Support</a></nav></section>
+  <section aria-labelledby="footer-receipts"><h2 id="footer-receipts">Receipts</h2><nav aria-label="Receipts resources"><a href="../receipts/index.html">About the app</a></nav></section>
+ </div><p class="copyright">&copy; 2026 Nomara. All rights reserved.</p>
+</div></footer>
+</body>
+</html>
